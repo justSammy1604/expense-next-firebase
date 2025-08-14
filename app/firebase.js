@@ -1,17 +1,18 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getFirestore} from 'firebase/firestore'
+import { getFirestore } from 'firebase/firestore'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// Note: Ensure these env vars are defined (preferably in project root .env.local)
 const firebaseConfig = {
-  apiKey: "AIzaSyDpRAPfj9qTp-xAf8kk9SXQFOaeKdXZY50",
-  authDomain: "next-expense-tracker-26a2c.firebaseapp.com",
-  projectId: "next-expense-tracker-26a2c",
-  storageBucket: "next-expense-tracker-26a2c.firebasestorage.app",
-  messagingSenderId: "626860997528",
-  appId: "1:626860997528:web:ba0d4756f11c7d3a7849ed"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
